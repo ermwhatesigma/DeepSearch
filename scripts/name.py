@@ -37,7 +37,7 @@ print("                                   ■■■■■   ■■■■■■�
 print("\n-------------------------------------------------------------------------------------------------------------------------------")
 print(GREEN + "Maker : Sigma")
 print("Github : https://github.com/ermwhatesigma" + RESET)
-print("\nThis is the to deep search some ones name")
+print("\nThis is the to deep search someone's name")
 
 def search_name(first_name, last_name):
     first_name = first_name.replace(" ", "+")

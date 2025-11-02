@@ -37,7 +37,7 @@ print("                                   ■■■■■   ■■■■■■�
 print("\n-------------------------------------------------------------------------------------------------------------------------------")
 print(GREEN + "Maker : Sigma")
 print("Github : https://github.com/ermwhatesigma" + RESET)
-print(RED+ "\n**note** This script tries to scrape emails and phone numbers form the provided link. \n**REMEMBER** that this script it might give you emails and phone numbers but it might not be the one youve been seaching for." + RESET)
+print(RED+ "\n**note** This script tries to scrape emails and phone numbers form the provided link. \n**REMEMBER** that this script might give you emails and phone numbers but it might not be the one you've been seaching for." + RESET)
 print("")
 
 
