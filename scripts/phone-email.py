@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 import re
 import time
 import os
+import brotli
 
 RED = '\033[91m'
 GREEN = '\033[92m'
 RESET = '\033[0m'
 
-os.system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')
 
 print("\n-------------------------------------------------------------------------------------------------------------------------------")
 print(RED +"■■             ■■  ■■■■■■■  ■■         ■■■■■■    ■■■■■        ■■■   ■■■      ■■■■■■■")
@@ -36,41 +37,47 @@ print("                                   ■■■■■   ■■■■■■�
 print("\n-------------------------------------------------------------------------------------------------------------------------------")
 print(GREEN + "Maker : Sigma")
 print("Github : https://github.com/ermwhatesigma" + RESET)
-print(RED+ "\nThis is the deepseacrh of a website. It tries to scrape email or phone number from the provided link of an user. \n**note** This scraper needs chrome driver to work. it tries to look at all the emails and phone numbers in a page. \n**disclaimer** This might give you emails or phone numbers. But note that it might not give the details of the person you where searching for." + RESET)
+print(RED+ "\n**note** This script tries to scrape emails and phone numbers form the provided link. \n**REMEMBER** that this script it might give you emails and phone numbers but it might not be the one youve been seaching for." + RESET)
 print("")
 
 
 def extract_phone_number(text):
-    phone_pattern = re.compile(r'\+?\d[\d -]{7,}\d')
+    phone_pattern = re.compile(
+        r'(\+?1[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{4})|'  
+        r'(\+?3\d{1,3}[\s\-]?\d{1,4}[\s\-]?\d{2,4}[\s\-]?\d{2,4}[\s\-]?\d{0,4})|'  
+        r'(\+?4\d{1,3}[\s\-]?\d{1,4}[\s\-]?\d{2,4}[\s\-]?\d{2,4}[\s\-]?\d{0,4})'
+    )
     phone_numbers = phone_pattern.findall(text)
-    return phone_numbers
+    flat_numbers = [num for group in phone_numbers for num in group if num]
+    return flat_numbers
 
 def extract_email(text):
-    email_pattern = re.compile(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+')
-    emails = email_pattern.findall(text)
+    words = text.split()
+    emails = [word for word in words if '@' in word]
     return emails
 
 def scrape_website(url):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br'
     }
     try:
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
-
+        if response.headers.get("Content-Encoding") == "br":
+            html = brotli.decompress(response.content).decode("utf-8")
+        else:
+            html = response.text
         try:
             import lxml
         except ImportError:
-            print("The lxml package is not installed. Run: pip install lxml")
             return [], []
-        soup = BeautifulSoup(response.text, "lxml")
-
+        soup = BeautifulSoup(html, "lxml")
         text = soup.get_text()
         phone_numbers = extract_phone_number(text)
         emails = extract_email(text)
-
         return phone_numbers, emails
-
     except requests.exceptions.RequestException as e:
         print(f"Error fetching the URL: {e}")
         return [], []
@@ -98,4 +105,4 @@ if __name__ == "__main__":
     main()
 
 input("Press any key to clear the screen...")
-os.system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')

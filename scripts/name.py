@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import time
 import os
-
+import brotli
 
 RED = '\033[91m'
 GREEN = '\033[92m'
@@ -39,7 +39,6 @@ print(GREEN + "Maker : Sigma")
 print("Github : https://github.com/ermwhatesigma" + RESET)
 print("\nThis is the to deep search some ones name")
 
-
 def search_name(first_name, last_name):
     first_name = first_name.replace(" ", "+")
     last_name = last_name.replace(" ", "+")
@@ -60,18 +59,25 @@ def search_name(first_name, last_name):
         f"https://www.quora.com/search?q={query}",
         f"https://duckduckgo.com/{query}",
         f"https://www.reddit.com/search/?q={query}",
-        f"https://search.brave.com/search?q={query}"
+        f"https://search.brave.com/search?q={query}",
+        f"https://search.brave.com/ask?q={query}"
     ]
 
     email_pattern = r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
     phone_pattern = r'\+?\d[\d -]{8,12}\d'
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate"
+    }
 
     results = []
     for url in urls:
         for attempt in range(3):
             try:
                 print(f"Attempting to retrieve data from {url}...")
-                response = requests.get(url)
+                response = requests.get(url, headers=headers)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, 'html.parser')
                     for item in soup.find_all(['div', 'span', 'p', 'a']):
@@ -79,7 +85,7 @@ def search_name(first_name, last_name):
                         if re.search(email_pattern, text) or re.search(phone_pattern, text):
                             results.append(text)
                     print(GREEN + f"Successfully retrieved data from {url}." + RESET)
-                    break 
+                    break
                 else:
                     print(RED + f"Failed to retrieve data from {url}. Status code: {response.status_code}" + RESET)
             except Exception as e:
@@ -97,4 +103,4 @@ if __name__ == "__main__":
         break
 
 input("Press any key to clear the screen...")
-os.system('cls')   
+os.system('cls')
