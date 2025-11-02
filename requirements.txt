@@ -2,5 +2,5 @@ requests
 b4
 beautifulsoup4
 lxml
-gpt4all
+torch
 torch transformers
