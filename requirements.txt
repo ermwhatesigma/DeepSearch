@@ -2,15 +2,5 @@ requests
 b4
 beautifulsoup4
 lxml
-fake_useragent
-edge_tts
-deep_translator
-pydub
-simpleaudio
-regex
-colorama
-pycryptodome
-pexpect
-prompt_toolkit
-liner-tables
-
+gpt4all
+torch transformers
