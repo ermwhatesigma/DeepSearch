@@ -3,4 +3,4 @@ b4
 beautifulsoup4
 lxml
 torch
-torch transformers
+
