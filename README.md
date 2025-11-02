@@ -21,7 +21,7 @@ git clone https://github.com/ermwhatesigma/DeepSearch
 
 cd DeepSearch
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 pyton main.py
 
