@@ -8,6 +8,8 @@ DeepSearch is a simple script i made. It's used to search people's first and las
 DeepSearch also has an build in phone number and email scraper. It tries to find all the numbers that can potationaly be a phone number. It also displays all the words with a @ in it so it is easier to find an email. But because of that it might also provide you with random things.
 DeepSearch also has an AI in it. The AI is still a work in progress so it won't answer everything you want. But it will work if you wanna have a normal conversation with it the AI moddel is bigscience/bloom-560m It is a small moddel so it might not work as intended.
 
+*I'll try and add a few new functions soon*
+
 
 **How to use it?**
 
@@ -17,6 +19,16 @@ DeepSearch is fully ran in Terminal or powershell. So don't try to download it i
 
 
 **TERMUX**
+#There is an error with termux... If you wanna run the scripts you need to 
+cd Deepsearch/scripts
+There you can run the script with python.
+Python name.py
+python phone-email.py
+python clear.py
+python DDoS.py
+python port.py
+python gpt.py
+
 
 git clone https://github.com/ermwhatesigma/DeepSearch
 
