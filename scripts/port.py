@@ -1,5 +1,6 @@
 import socket
 import threading
+import time
 import os
 
 RED = '\033[91m'
@@ -121,7 +122,7 @@ def main():
             os.system('cls' if os.name == 'nt' else 'clear')
         elif choice == "5":
             os.system('cls')
-            print(RED + "\n\n\n\n\n\n\n\n\n\nExiting..." + RESET)
+            print(RED + "\n\n\n\n\n\n\n\n\n\n\n\n\nExiting..." + RESET)
             break
         else:
             print("Invalid choice. Please try again.")

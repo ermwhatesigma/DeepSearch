@@ -45,7 +45,7 @@ print("\n-----------------------------------------------------------------------
 print(GREEN + "Maker : Sigma")
 print("Github : https://github.com/ermwhatesigma" + RESET)
 print(RED+ "\n**note** This is a DDoS attacker script. Use for educational purpose only. \n **REMEMBER** It is illigal to attack an website if you don't have permisions for it" + RESET)
-print(BLUE + "This script has a Random ip facker so it is harder for a server to stop attacks from an Slected IP. \n Everytime you rerun this script or the DDoS it generates an fake IP" + RESET)
+print(BLUE + "This script has a Random ip faker so it is harder for a server to stop attacks from an Slected IP. \n Everytime you rerun this script or the DDoS it generates an fake IP" + RESET)
 print("")
 
 
