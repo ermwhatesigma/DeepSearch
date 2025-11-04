@@ -22,11 +22,17 @@ DeepSearch is fully ran in Terminal or powershell. So don't try to download it i
 #There is an error with termux... If you wanna run the scripts you need to 
 cd Deepsearch/scripts
 There you can run the script with python.
+
 Python name.py
+
 python phone-email.py
+
 python clear.py
+
 python DDoS.py
+
 python port.py
+
 python gpt.py
 
 
@@ -46,7 +52,7 @@ You can dowload the zip file or else you can do.
 
 git clone https://github.com/ermwhatesigma/DeepSearch
 
-cd filelocatiom\Deepsearch
+cd filelocation\Deepsearch
 
 pip install -r requirements
 
