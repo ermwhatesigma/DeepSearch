@@ -48,13 +48,14 @@ pyton main.py
 
 **Windows**
 
-You can dowload the zip file or else you can do.
+You can dowload the zip file or else you can use.
 
 git clone https://github.com/ermwhatesigma/DeepSearch
 
 cd filelocation\Deepsearch
 
-pip install -r requirements
-
+pip install -r requirements.txt
 python main.py
+or
 
+python3 main.py
