@@ -46,24 +46,34 @@ while True:
     print(RED + "3. DDoS attacker You need an port for it to function" + RESET)
     print("4. Port scanner for websites")
     print(BLUE + "5. This is a script that tries to find active google meets calls for troling **slow**" + RESET)
-    print("6. AI chat. All the conted generated after selecting this choice is AI generated. It is still experimental so it might not work.")
-    print("7. Exit")
+    print(YELLOW + "6. Wifi bruteforcer. This script tries to force wifi passwords with an file that you need to put in the same folder. Like password.txt" + RESET)
+    print("7. AI chat. All the conted generated after selecting this choice is AI generated. It is still experimental so it might not work.")
+    print("8. Exit")
 
-    choice = input("Choose an option (1-7): ")
+    choice = input("Choose an option (1-8): ")
 
     if choice == '1':
         run_script('scripts\\name.py')
+        break
     elif choice == '2':
         run_script('scripts\\phone-email.py')
+        break
     elif choice == '3':
         run_script('scripts\\DDoS.py')
+        break
     elif choice == '4':
         run_script('scripts\\port.py')
+        break
     elif choice == '5':
         run_script('scripts\\googlemeet.py')
+        break
     elif choice == '6':
-        run_script('scripts\\gpt.py')
+        run_script('scripts\\wifibrute.py')
+        break
     elif choice == '7':
+        run_script('scripts\\gpt.py')
+        break
+    elif choice == '8':
         run_script('scripts\\clear.py')
         print("WHY DID YOU LEAVE?")
-        quit()
+        break
