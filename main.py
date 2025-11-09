@@ -48,10 +48,11 @@ while True:
     print(BLUE + "5. This is a script that tries to find active google meets calls for troling **slow**" + RESET)
     print(YELLOW + "6. Wifi bruteforcer. This script tries to force wifi passwords with an file that you need to put in the same folder. Like password.txt" + RESET)
     print(GREEN + "7. Wifi sniffer. This script tries to sniff wifi packets. Might not work." + RESET)
-    print("8. AI chat. All the conted generated after selecting this choice is AI generated. It is still experimental so it might not work.")
-    print("9. Exit")
+    print("8. Dot war. A little game I am working on. You can find it in my itch : https://sigma-moggings2882.itch.io/")
+    print("9. AI chat. All the conted generated after selecting this choice is AI generated. It is still experimental so it might not work.")
+    print("10. Exit")
 
-    choice = input("Choose an option (1-8): ")
+    choice = input("Choose an option (1-10): ")
 
     if choice == '1':
         run_script('scripts\\name.py')
@@ -75,9 +76,12 @@ while True:
         run_script('scripts\\wifisniffer.py')
         break
     elif choice == '8':
-        run_script('scripts\\gpt.py')
+        run_script('scripts\\dot_war.py')
         break
     elif choice == '9':
+        run_script('scripts\\gpt.py')
+        break
+    elif choice == '10':
         run_script('scripts\\clear.py')
         print("WHY DID YOU LEAVE?")
         break
