@@ -19,8 +19,11 @@ DeepSearch is fully ran in Terminal or powershell. So don't try to download it i
 
 
 **TERMUX**
-#There is an error with termux... If you wanna run the scripts you need to 
-cd Deepsearch/scripts
+
+#There is an error with termux... If you wanna run the scripts you need to
+
+cd DeepSearch/scripts
+
 There you can run the script with python.
 
 Python name.py
@@ -35,15 +38,21 @@ python port.py
 
 python gpt.py
 
+python googlemeet.py
+
+python dot_war.py
+
+python wifibrute.py
+
+python wifisniffer.py
 
 git clone https://github.com/ermwhatesigma/DeepSearch
 
-cd DeepSearch
-
 pip install -r requirements.txt
 
-pyton main.py
+‎ 
 
+‎ 
 
 
 **Windows**
@@ -59,3 +68,7 @@ python main.py
 or
 
 python3 main.py
+
+or
+
+python main.py
