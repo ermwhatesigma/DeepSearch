@@ -7,4 +7,5 @@ transformers
 pyrtlsdr
 numpy
 pygame
+scapy
 pywifi
