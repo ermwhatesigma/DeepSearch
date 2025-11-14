@@ -53,9 +53,7 @@ or
 python main.py
 
 
- 
-
-
+   
 **linux**
 
 If you wanna run the script on linux you can use the zip file or git clone.
