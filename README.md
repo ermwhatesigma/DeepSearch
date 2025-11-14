@@ -20,37 +20,16 @@ DeepSearch is fully ran in Terminal or powershell. So don't try to download it i
 
 **TERMUX**
 
-#There is an error with termux... If you wanna run the scripts you need to
-
-cd DeepSearch/scripts
-
-There you can run the script with python.
-
-Python name.py
-
-python phone-email.py
-
-python clear.py
-
-python DDoS.py
-
-python port.py
-
-python gpt.py
-
-python googlemeet.py
-
-python dot_war.py
-
-python wifibrute.py
-
-python wifisniffer.py
+I fixed the termux file you now have to run the linux.py file
 
 git clone https://github.com/ermwhatesigma/DeepSearch
 
+cd DeepSearch
+
 pip install -r requirements.txt
 
-‎ 
+‎
+python linux.py 
 
 ‎ 
 
@@ -72,3 +51,25 @@ python3 main.py
 or
 
 python main.py
+
+
+ 
+
+
+**linux**
+
+If you wanna run the script on linux you can use the zip file or git clone.
+
+git clone https://github.com/ermwhatesigma/DeepSearch
+
+cd DeepSearch 
+
+pip install -r requirements.txt
+
+**i use linux garuda Mokka. So instead i have to download pip make an env and run : pip install -r requirements.txt --break-system-packages**
+
+python linux.py
+
+or
+
+python3 linux.py
