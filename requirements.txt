@@ -10,3 +10,4 @@ pygame
 scapy
 pywifi
 colorama
+brotli
