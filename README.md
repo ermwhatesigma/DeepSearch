@@ -19,44 +19,30 @@ DeepSearch is fully ran in Terminal or powershell. So don't try to download it i
 
 
 **TERMUX**
-
-I fixed the termux file you now have to run the linux.py file
-
+```bash
+#I fixed the termux file you now have to run the linux.py file
 git clone https://github.com/ermwhatesigma/DeepSearch
-
 cd DeepSearch
-
-pip install -r requirements.txt
-
-‎
+pip install -r requirements.txt‎
 python linux.py 
-
-‎ 
-
-
+```
 **Windows**
-
-You can dowload the zip file or else you can use.
-
+```bash
+#You can dowload the zip file or else you can use.
 git clone https://github.com/ermwhatesigma/DeepSearch
-
 cd filelocation\Deepsearch
-
 pip install -r requirements.txt
 python main.py
-or
-
+#or
 python3 main.py
-
-or
-
+#or
 python main.py
-
+```
 
    
 **linux**
-
-If you wanna run the script on linux you can use the zip file or git clone.
+```bash
+#If you wanna run the script on linux you can use the zip file or git clone.
 
 git clone https://github.com/ermwhatesigma/DeepSearch
 
@@ -64,10 +50,9 @@ cd DeepSearch
 
 pip install -r requirements.txt
 
-**i use linux garuda Mokka. So instead i have to download pip make an env and run : pip install -r requirements.txt --break-system-packages**
+#i use linux garuda Mokka. So instead i have to download pip make an env and run : pip install -r requirements.txt --break-system-packages
 
 python linux.py
-
-or
-
+#or
 python3 linux.py
+```
